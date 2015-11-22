@@ -1,8 +1,9 @@
+- var v = Date.now()
+
 doctype html
 html(lang='en')
   head
     title Day and Night
-    link(rel='stylesheet' href='css/index.css')
     meta(name='twitter:card' content='app')
     meta(name='twitter:site' content='@houkanshan')
     meta(name='twitter:description' content='TODO')
@@ -12,6 +13,7 @@ html(lang='en')
     meta(name='twitter:app:name:ipad' content='Day & Night')
     meta(name='twitter:app:id:ipad' content='1053986842')
 
+    link(rel='stylesheet' href='css/index.css?v=#{v}')
   body
     p hello world
-    script(src='js/index.js')
+    script(src='js/index.js?v=#{v}')

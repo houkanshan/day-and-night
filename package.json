@@ -1,0 +1,33 @@
+{
+  "name": "day-and-night",
+  "version": "1.0.0",
+  "description": "Website of Day & Night",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "mkdir -p css; mkdir -p js",
+    "css": "./node_modules/.bin/stylus -u autoprefixer-stylus -o ./css ./source/css/index.styl",
+    "js": "./node_modules/.bin/webpack",
+    "html": "./node_modules/.bin/jade --pretty --out ./ source",
+    "build": "npm run prebuild && npm run css && npm run js && npm run html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/houkanshan/day-and-night.git"
+  },
+  "author": "Houkanshan",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/houkanshan/day-and-night/issues"
+  },
+  "homepage": "https://houkanshan.github.io/day-and-night",
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.8.1",
+    "babel": "^6.1.18",
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "jade": "^1.11.0",
+    "stylus": "^0.52.4",
+    "webpack": "^1.12.8"
+  }
+}

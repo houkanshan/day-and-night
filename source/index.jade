@@ -1,9 +1,11 @@
-- var v = Date.now()
+- const v = Date.now()
+- const defaultDate = (new Date()).toLocaleDateString()
 
 doctype html
 html(lang='en')
   head
     title Day and Night
+    meta(name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0")
     meta(name='twitter:card' content='app')
     meta(name='twitter:site' content='@houkanshan')
     meta(name='twitter:description' content='TODO')
@@ -15,5 +17,19 @@ html(lang='en')
 
     link(rel='stylesheet' href='css/index.css?v=#{v}')
   body
-    p hello world
+    header#title-section
+      h1#title Day and Night
+    section#logo
+    section#intro
+      p It's
+        time= defaultDate
+        , The 
+        span.daynight day
+        | .
+      p Trying to figure out this stuff, it looks like a maze.
+        
+    section#store
+      a#btn-ios
+        span.icon-apple
+        span Waiting for Something.
     script(src='js/index.js?v=#{v}')

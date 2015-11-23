@@ -9,7 +9,11 @@
     "css": "./node_modules/.bin/stylus -u autoprefixer-stylus -o ./css ./source/css/index.styl",
     "js": "./node_modules/.bin/webpack",
     "html": "./node_modules/.bin/jade --pretty --out ./ source",
-    "build": "npm run prebuild && npm run css && npm run js && npm run html"
+    "watch:css": "./node_modules/.bin/stylus -w -u autoprefixer-stylus -o ./css ./source/css/index.styl",
+    "watch:html": "./node_modules/.bin/jade -w --pretty --out ./ source",
+    "watch:js": "./node_modules/.bin/webpack -w",
+    "build": "npm run prebuild && npm run css && npm run js && npm run html",
+    "server": "http-server"
   },
   "repository": {
     "type": "git",

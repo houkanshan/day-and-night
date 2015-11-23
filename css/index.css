@@ -1,4 +1,114 @@
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+img,
+fieldset {
+  border: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+div {
+  word-wrap: break-word;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+q:before,
+q:after {
+  content: '';
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+input {
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+}
+@font-face {
+  font-family: 'amatic';
+  src: url("../fonts/amaticsc-regular.eot");
+  src: url("../fonts/amaticsc-regular.eot?#iefix") format('embedded-opentype'), url("../fonts/amaticsc-regular.woff2") format('woff2'), url("../fonts/amaticsc-regular.woff") format('woff'), url("../fonts/amaticsc-regular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
-  font: 14px/1.5 12px Helvetica Neue, Arial, PingFang SC, sans-serif;
-  background: #f00;
+  font: 24px/1.2 amatic, Courier New, PingFang SC, serif;
+  color: #555;
+  padding: 40px 20px;
+}
+a {
+  color: #000;
+}
+a:hover {
+  color: #555;
+}
+section {
+  max-width: 400px;
+  margin: 0 auto;
+}
+#title-section {
+  margin-bottom: 40px;
+}
+#title {
+  text-align: center;
+  font-size: 60px;
+}
+#logo {
+  text-align: center;
+  height: 300px;
+}
+#store {
+  margin-top: 40px;
+  text-align: center;
 }

@@ -10,8 +10,10 @@ html(lang='en')
   body
     header#title-section
       h1#title Day and Night
-    section#logo
-      include ./svg/logo.svg
+    section#logo-section
+      #logo
+      include ./include/logo-overlays.jade
+      #logo-shadow
     section#intro
       p It's
         time= defaultDate

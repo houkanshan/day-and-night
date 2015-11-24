@@ -94,7 +94,7 @@ a:hover {
   color: #555;
 }
 section {
-  max-width: 400px;
+  max-width: 300px;
   margin: 0 auto;
 }
 #title-section {
@@ -106,9 +106,19 @@ section {
 }
 #logo {
   text-align: center;
-  height: 300px;
 }
 #store {
   margin-top: 40px;
-  text-align: center;
+  text-align: right;
+}
+#intro {
+  margin-top: 40px;
+}
+#svg-logo {
+  height: 300px;
+  margin-left: 16px;
+}
+#svg-apple {
+  height: 24px;
+  vertical-align: -1px;
 }

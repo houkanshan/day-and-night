@@ -1,0 +1,27 @@
+- const v = Date.now()
+- const defaultDate = (new Date()).toLocaleDateString()
+
+doctype html
+html(lang='en')
+  head
+    title Day and Night
+    include ./include/meta.jade
+    link(rel='stylesheet' href='css/index.css?v=#{v}')
+  body
+    header#title-section
+      h1#title Day and Night
+    section#logo
+      include ./svg/logo.svg
+    section#intro
+      p It's
+        time= defaultDate
+        | , The 
+        span.daynight day
+        | .
+      p Trying to figure out this stuff, it looks like a maze.
+        
+    section#store
+      a#btn-ios
+        include ./svg/apple.svg
+        span Coming soon.
+    script(src='js/index.js?v=#{v}')

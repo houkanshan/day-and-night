@@ -1,16 +1,14 @@
 @require './reset'
 @require './fonts'
 @require './logo'
+@require './day-night'
 
 body
   font: 24px/1.2 amatic, Courier New, PingFang SC, serif
-  color: #555
   padding: 40px 20px
 
 a
-  color: #000
-  &:hover
-    color: #555
+  color: lighten(#000, 60%)
 
 section
   max-width: 300px

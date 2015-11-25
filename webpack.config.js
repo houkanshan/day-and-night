@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  devtool: 'inline-source-map',
   entry: './source/js/index.es',
   output: {
     path: __dirname,
@@ -9,15 +10,18 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.es?$/,
+        loader: 'babel-loader',
+        test: /\.(es|js)$/,
         include: [
-          path.resolve(__dirname, "source"),
+          path.resolve(__dirname, "source/js"),
         ],
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel',
         query: {
-          cacheDirectory: true,
+          presets: ['es2015', 'stage-2'],
         },
+        resolve: {
+          extensions: ['.es', '.js'],
+        }
       },
     ]
   },

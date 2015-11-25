@@ -1,0 +1,44 @@
+duration = 60s
+
+@keyframes body
+  0%, 100%
+    background-color: #fff
+    color: #000
+  50%
+    background-color: #000
+    color: #fff
+
+body
+  animation: body duration infinite ease-in-out
+
+@keyframes a
+  0%, 100%
+    color: lighten(#000, 60%)
+  50%
+    color: darken(#fff, 60%)
+a
+  animation: a duration infinite ease-in-out
+
+@keyframes logo
+  0%, 100%
+    background-color: #000
+  50%
+    background-color: #fff
+#logo
+  animation: logo duration infinite ease-in-out
+
+@keyframes logo-shadow
+  0%, 100%
+    box-shadow: inset 0 0 82px -30px #000
+  50%
+    box-shadow: inset 0 0 100px -7px #fff
+#logo-shadow
+  animation: logo-shadow duration infinite ease-in-out
+
+@keyframes apple
+  0%, 100%
+    fill: lighten(#000, 60%)
+  50%
+    fill: darken(#fff, 60%)
+#svg-apple
+  animation: apple duration infinite ease-in-out

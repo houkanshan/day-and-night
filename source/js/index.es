@@ -1,1 +1,2 @@
-console.log('hello')
+import 'babel-regenerator-runtime'
+import './logo.es'

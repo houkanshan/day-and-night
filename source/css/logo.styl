@@ -5,10 +5,6 @@ height = 300px
   height: height
   position: relative
 
-#svg-logo
-  height: height
-  margin-left: 16px
-
 #logo
 #logo-shadow
   position: absolute
@@ -20,23 +16,25 @@ height = 300px
   transform: rotate(degree) skew(degree)
 #logo
   background-color: #000
+  overflow: hidden
+
 #logo-shadow
   background-color: transparent
   box-shadow: inset 0 0 82px -30px #000
 
 #logo-overlays
-  display: none
   position: absolute
-  top: -12px
   left: 0
+  top: 0
   img
-    height: 300px - @top
+    height: 314px
     position: absolute
     top: 0
     left: 0
-    mix-blend-mode: lighten
     opacity: 0
-
-@supports (mix-blend-mode: lighten)
-  #logo-overlays
-    display: block
+    degree = -50deg
+    transform: skew(degree) rotate(degree) translate(-87px, -12px)
+    transform-origin: 0 0
+    transition: opacity 5s ease-in-out
+    &.show
+      opacity: 1

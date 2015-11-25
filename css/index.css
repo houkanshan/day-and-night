@@ -129,6 +129,23 @@ a {
 #logo-overlays img.show {
   opacity: 1;
 }
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+#background #fragments {
+  display: none;
+}
+#background #fragments.ready {
+  display: block;
+}
+#background svg {
+  position: absolute;
+}
 body {
   -webkit-animation: body 60s infinite ease-in-out;
           animation: body 60s infinite ease-in-out;
@@ -145,9 +162,13 @@ a {
   -webkit-animation: logo-shadow 60s infinite ease-in-out;
           animation: logo-shadow 60s infinite ease-in-out;
 }
-#svg-apple {
+#btn-ios svg {
   -webkit-animation: apple 60s infinite ease-in-out;
           animation: apple 60s infinite ease-in-out;
+}
+#fragments svg {
+  -webkit-animation: background-day 60s infinite ease-in-out;
+          animation: background-day 60s infinite ease-in-out;
 }
 @-webkit-keyframes body {
   0%, 100% {
@@ -233,6 +254,22 @@ a {
     fill: #666;
   }
 }
+@-webkit-keyframes background-day {
+  0%, 50%, 100% {
+    fill: #000;
+  }
+  25%, 75% {
+    fill: #808080;
+  }
+}
+@keyframes background-day {
+  0%, 50%, 100% {
+    fill: #000;
+  }
+  25%, 75% {
+    fill: #808080;
+  }
+}
 body {
   font: 24px/1.2 amatic, Courier New, PingFang SC, serif;
   padding: 40px 20px;
@@ -258,7 +295,7 @@ section {
 #intro {
   margin-top: 40px;
 }
-#svg-apple {
+#btn-ios svg {
   height: 24px;
   vertical-align: -1px;
 }

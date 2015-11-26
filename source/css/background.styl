@@ -5,9 +5,23 @@
   right: 0
   bottom: 0
   z-index: -1
-  #fragments
-    display: none
-    &.ready
-      display: block
+  overflow: hidden
+#fragments
+  display: none
+  &.ready
+    display: block
   svg
     position: absolute
+
+#stars
+  .star
+    mix-blend-mode: hard-light
+    duration = 30s
+    position: absolute
+    transition: transform duration linear, opacity duration ease-in-out
+    display: block
+    background: #808080
+    &::after
+      content: ''
+      display: block
+      padding-top: 100%

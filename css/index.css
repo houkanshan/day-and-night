@@ -136,15 +136,29 @@ a {
   right: 0;
   bottom: 0;
   z-index: -1;
+  overflow: hidden;
 }
-#background #fragments {
+#fragments {
   display: none;
 }
-#background #fragments.ready {
+#fragments.ready {
   display: block;
 }
-#background svg {
+#fragments svg {
   position: absolute;
+}
+#stars .star {
+  mix-blend-mode: hard-light;
+  position: absolute;
+  -webkit-transition: -webkit-transform 30s linear, opacity 30s ease-in-out;
+          transition: transform 30s linear, opacity 30s ease-in-out;
+  display: block;
+  background: #808080;
+}
+#stars .star::after {
+  content: '';
+  display: block;
+  padding-top: 100%;
 }
 body {
   -webkit-animation: body 60s infinite ease-in-out;

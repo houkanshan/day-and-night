@@ -23,11 +23,20 @@ section
   font-size: 60px
 
 #store
-  margin-top: 40px
+  margin-top: 20px
   text-align: right
 
-#intro
+#intros
   margin-top: 40px
+  position: relative
+  height: 90px
+  .intro
+    position: absolute
+    left: 0
+    top: 0
+    transition: opacity 3s ease-in-out
+    &.hide
+      opacity: 0
 
 #btn-ios svg
   height: 24px

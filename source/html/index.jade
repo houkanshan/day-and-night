@@ -15,14 +15,14 @@ html(lang='en')
       #logo
         include ./include/logo-overlays.jade
       #logo-shadow
-    section#intro
-      p It's
-        time= defaultDate
-        | , The 
-        span.daynight day
-        | .
-      p Trying to figure out this stuff, it looks like a maze.
-        
+    section#intros
+      .intro
+        p It's
+          time= defaultDate
+          | , The 
+          span.daynight day
+          | .
+        p.content Trying to figure out this stuff, it looks like a maze.
     section#store
       a#btn-ios
         include ./svg/apple.svg

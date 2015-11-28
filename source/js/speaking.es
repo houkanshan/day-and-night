@@ -13,7 +13,7 @@ const dayScripts = [
 ]
 const nightScripts = [
   'I work at night if needed, won\'t be too late.',
-  'Try to go to bed early to catch up on sleep.',
+  'I\'ll go to bed early to catch up on sleep.',
   'I like sleeping, but not when I got an insomnia.',
   'They make noise at night this time.',
 ]

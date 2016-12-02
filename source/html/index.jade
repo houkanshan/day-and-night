@@ -7,6 +7,14 @@ html(lang='en')
     title Day and Night
     include ./include/meta.jade
     link(rel='stylesheet' href='css/index.css?v=#{v}')
+    link(rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png")
+    link(rel="manifest" href="/manifest.json")
+    meta(name="theme-color" content="#808080")
+    link(rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon")
+
   body
     include ./include/background.jade
     header#title-section
@@ -16,15 +24,10 @@ html(lang='en')
         include ./include/logo-overlays.jade
       #logo-shadow
     section#intros
-      .intro
-        p It's
-          time= defaultDate
-          | , The 
-          span.daynight day
-          | .
-        p.content Trying to figure out this stuff, it looks like a maze.
+      .intro A 3D physics maze game.
     section#store
-      a#btn-ios
-        include ./svg/apple.svg
-        span Coming soon.
+      a#btn-credits.link(href='./credits') Credits
+      a#btn-ios.link(href="https://itunes.apple.com/app/day-night-the-game/id1053986842?mt=8")
+        include ./svg/apple-download.svg
+        span.extra 中国大陆除外
     script(src='js/index.js?v=#{v}')

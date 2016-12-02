@@ -5,10 +5,13 @@
 @require './day-night'
 
 body
-  font: 24px/1.2 amatic, Courier New, PingFang SC, serif
+  font: 14px/1.2 Courier New, PingFang SC, monospace
   padding: 40px 20px
 
-a
+body.font-loaded
+  font: 24px/1.2 amatic, Courier New, PingFang SC, monospace
+
+a.link
   color: lighten(#000, 60%)
 
 section
@@ -20,24 +23,75 @@ section
 
 #title
   text-align: center
-  font-size: 60px
+  font-size: 2.5em
+
+#subtitle
+  font-size: 1.2em
+  text-align: center
+  &:before, &:after
+    content: '-'
+    margin: 0 10px
 
 #store
   margin-top: 20px
   text-align: right
 
 #intros
-  margin-top: 40px
+  margin-top: 64px
   position: relative
-  height: 90px
+  height: 55px
   .intro
-    position: absolute
-    left: 0
-    top: 0
-    transition: opacity 3s ease-in-out
-    &.hide
-      opacity: 0
+    margin-left: 6px
+    text-align: center
 
-#btn-ios svg
-  height: 24px
-  vertical-align: -1px
+#btn-credits
+  height: 40px
+  line-height: @height
+  float: left
+  margin-left: 42px
+
+#btn-ios
+  svg
+    height: 40px
+    vertical-align: -1px
+  .extra
+    font-size: 12px
+    display: block
+
+// Credits
+.page-credits
+  text-align: center
+  animation: none
+  #title a
+    text-decoration: none
+    &:hover
+      opacity: 0.3
+  a
+    text-decoration: underline
+    color: #000
+    animation: none
+    &:hover
+      text-decoration: none
+  section
+    margin-bottom: 40px
+    h1
+      font-size: 1.8em
+      margin-bottom: 20px
+    p
+      font-size: 1.4em
+
+#music
+  .extra
+    font-size: 12px
+    font-family: monospace
+    margin-top: 10px
+    white-space: pre
+
+#tester
+  p
+    margin-right: -1em
+    text-align: left
+  a,span
+    display: inline-block
+    margin-right: 1em
+    margin-bottom: 10px

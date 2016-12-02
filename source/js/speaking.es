@@ -12,7 +12,7 @@ const dayScripts = [
   'Trying to figure out this stuff, it looks like a maze.',
 ]
 const nightScripts = [
-  'I work at night if needed, won\'t be too late.',
+  'I\'ll work at night if needed, won\'t be too late.',
   'I\'ll go to bed early to catch up on sleep.',
   'I like sleeping, but not when I got an insomnia.',
   'They make noise at night this time.',
@@ -71,4 +71,3 @@ setTimeout(_ => {
     setTimeout(updateIntro, 1000)
   }, 30000)
 }, 15000)
-

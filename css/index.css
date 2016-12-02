@@ -130,7 +130,7 @@ a {
   opacity: 1;
 }
 #background {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -160,11 +160,12 @@ a {
   display: block;
   padding-top: 100%;
 }
-body {
+body,
+a {
   -webkit-animation: body 60s infinite ease-in-out;
           animation: body 60s infinite ease-in-out;
 }
-a {
+a.link {
   -webkit-animation: a 60s infinite ease-in-out;
           animation: a 60s infinite ease-in-out;
 }
@@ -285,10 +286,13 @@ a {
   }
 }
 body {
-  font: 24px/1.2 amatic, Courier New, PingFang SC, serif;
+  font: 14px/1.2 Courier New, PingFang SC, monospace;
   padding: 40px 20px;
 }
-a {
+body.font-loaded {
+  font: 24px/1.2 amatic, Courier New, PingFang SC, monospace;
+}
+a.link {
   color: #999;
 }
 section {
@@ -300,28 +304,87 @@ section {
 }
 #title {
   text-align: center;
-  font-size: 60px;
+  font-size: 2.5em;
+}
+#subtitle {
+  font-size: 1.2em;
+  text-align: center;
+}
+#subtitle:before,
+#subtitle:after {
+  content: '-';
+  margin: 0 10px;
 }
 #store {
   margin-top: 20px;
   text-align: right;
 }
 #intros {
-  margin-top: 40px;
+  margin-top: 64px;
   position: relative;
-  height: 90px;
+  height: 55px;
 }
 #intros .intro {
-  position: absolute;
-  left: 0;
-  top: 0;
-  -webkit-transition: opacity 3s ease-in-out;
-          transition: opacity 3s ease-in-out;
+  margin-left: 6px;
+  text-align: center;
 }
-#intros .intro.hide {
-  opacity: 0;
+#btn-credits {
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  margin-left: 42px;
 }
 #btn-ios svg {
-  height: 24px;
+  height: 40px;
   vertical-align: -1px;
+}
+#btn-ios .extra {
+  font-size: 12px;
+  display: block;
+}
+.page-credits {
+  text-align: center;
+  -webkit-animation: none;
+          animation: none;
+}
+.page-credits #title a {
+  text-decoration: none;
+}
+.page-credits #title a:hover {
+  opacity: 0.3;
+}
+.page-credits a {
+  text-decoration: underline;
+  color: #000;
+  -webkit-animation: none;
+          animation: none;
+}
+.page-credits a:hover {
+  text-decoration: none;
+}
+.page-credits section {
+  margin-bottom: 40px;
+}
+.page-credits section h1 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+.page-credits section p {
+  font-size: 1.4em;
+}
+#music .extra {
+  font-size: 12px;
+  font-family: monospace;
+  margin-top: 10px;
+  white-space: pre;
+}
+#tester p {
+  margin-right: -1em;
+  text-align: left;
+}
+#tester a,
+#tester span {
+  display: inline-block;
+  margin-right: 1em;
+  margin-bottom: 10px;
 }

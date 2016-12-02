@@ -1,5 +1,9 @@
-const imgs = document.querySelectorAll('#logo-overlays img')
+const imgs = [...document.querySelectorAll('#logo-overlays img')]
 const len = imgs.length
+
+imgs.forEach(function(img) {
+  img.src = img.getAttribute('data-src')
+})
 
 function *showHide() {
   let i = 0
@@ -13,10 +17,12 @@ function *showHide() {
   }
 }
 
-const gen = showHide()
-setTimeout(function() {
-  gen.next()
-}, 3000)
-setInterval(_ => {
-  gen.next()
-}, 15000)
+if (len) {
+  const gen = showHide()
+  setTimeout(function() {
+    gen.next()
+  }, 3000)
+  setInterval(_ => {
+    gen.next()
+  }, 15000)
+}

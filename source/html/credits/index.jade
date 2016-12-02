@@ -1,0 +1,77 @@
+- const v = Date.now()
+- const defaultDate = (new Date()).toLocaleDateString()
+-
+  tester = [
+    ['Ada'],
+    ['Abing', 'https://www.douban.com/people/danielblack/'],
+    ['Cosmicberry', 'https://www.douban.com/people/thunderlion/'],
+    ['Krazy Lee', 'https://www.douban.com/people/krazylee/'],
+    ['Hxgdzyuyi', 'https://www.douban.com/people/hxgdzyuyi/'],
+    ['Mockee', 'https://instagram.com/mockee/'],
+    ['Kidmirror', 'https://www.douban.com/people/kidmirror/'],
+    ['TQ', 'http://tianq.space/'],
+    ['djFFFFF', 'https://www.douban.com/people/subrays/'],
+    ['Lembacon', 'https://www.instagram.com/lembacon/'],
+    ['Gimo', 'https://www.douban.com/people/masakichi/'],
+    ['Anho Zhang'],
+    ['ZHU Qian'],
+    ['Gnod'],
+    ['ThankCreate', 'http://www.thankcreate.com/works'],
+    ['ZHANG Xianzhen', 'https://www.douban.com/people/growing07/']
+  ]
+  tester = tester.sort(function(a, b) {
+    return a[0].toUpperCase() < b[0].toUpperCase() ? -1 : 1
+  })
+
+doctype html
+html(lang='en')
+  head
+    title Credits - Day and Night
+    include ../include/meta.jade
+    link(rel='stylesheet' href='../css/index.css?v=#{v}')
+    link(rel="icon" type="image/png" sizes="192x192"  href="../favicon/android-icon-192x192.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png")
+    link(rel="manifest" href="../favicon/manifest.json")
+    meta(name="theme-color" content="#808080")
+    link(rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon")
+
+  body.page-credits
+    include ../include/background.jade
+    header#title-section
+      h1#title
+        a(href='/day-and-night') Day and Night
+      h2#subtitle Credits
+    section#author
+      h1 Design &amp; Develop
+      p
+        a(href='https://twitter.com/houkanshan' target='_blank') HOU Mai
+    section#music
+      h1 Music
+      p
+        a(href='http://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100394' target='_blank')
+          | Almost in F - Kevin MacLeod
+      p.extra
+        | Licensed under Creative Commons:
+        br
+        | By Attribution 3.0 License
+        br
+        | http://creativecommons.org/licenses/by/3.0/
+    section#special-thanks
+      h1 Special Thanks
+      p
+        a(href='http://serotoninphobia.info/' target='_blank') Zerotonin
+      p HU Wei
+      p LUO Liang
+
+    section#tester
+      h1 Tester
+      p
+        -for (var i = 0, ilen = tester.length; i < ilen; i++)
+          -if (tester[i][1])
+            a(href=tester[i][1] target='_blan k')=tester[i][0]
+          -else
+            span=tester[i][0]
+
+    script(src='../js/index.js?v=#{v}')

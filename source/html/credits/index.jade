@@ -1,6 +1,13 @@
 - const v = Date.now()
 - const defaultDate = (new Date()).toLocaleDateString()
 -
+  sound = [
+    ['Rumble_BowlingBall.aif - klakmart', 'https://freesound.org/people/klakmart/sounds/108273/'],
+    ['marble.wav - scotru', 'https://freesound.org/people/scotru/sounds/34732/'],
+    ['Extractor Fan 02.wav - jarredgibb', 'https://freesound.org/people/jarredgibb/sounds/219488/'],
+    ['Woodblock[...].3.wav - rokenjocu', 'https://freesound.org/people/rokenjocu/sounds/262061/'],
+  ]
+-
   tester = [
     ['Ada'],
     ['Abing', 'https://www.douban.com/people/danielblack/'],
@@ -47,6 +54,7 @@ html(lang='en')
       h1 Design &amp; Develop
       p
         a(href='https://twitter.com/houkanshan' target='_blank') HOU Mai
+
     section#music
       h1 Music
       p
@@ -58,6 +66,16 @@ html(lang='en')
         | By Attribution 3.0 License
         br
         | http://creativecommons.org/licenses/by/3.0/
+
+    section#sound
+      h1 Sound
+      p.extra All from&nbsp;
+        a(href='https://freesound.org' target='_blank) https://freesound.org
+
+      -for (var i = 0, ilen = sound.length; i < ilen; i++)
+        p.list
+          a(href=sound[i][1] target='_blan k')=sound[i][0]
+
     section#special-thanks
       h1 Special Thanks
       p
@@ -67,7 +85,7 @@ html(lang='en')
 
     section#tester
       h1 Tester
-      p
+      p.list
         -for (var i = 0, ilen = tester.length; i < ilen; i++)
           -if (tester[i][1])
             a(href=tester[i][1] target='_blan k')=tester[i][0]

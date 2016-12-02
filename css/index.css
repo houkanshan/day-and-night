@@ -348,34 +348,51 @@ section {
           animation: none;
 }
 .page-credits #title a {
-  text-decoration: none;
+  background: transparent;
 }
 .page-credits #title a:hover {
   opacity: 0.3;
 }
 .page-credits a {
-  text-decoration: underline;
   color: #000;
+  background: rgba(0,0,0,0.05);
   -webkit-animation: none;
           animation: none;
 }
 .page-credits a:hover {
-  text-decoration: none;
+  background: transparent;
 }
 .page-credits section {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 .page-credits section h1 {
-  font-size: 1.8em;
+  font-size: 2em;
   margin-bottom: 20px;
+  position: relative;
+}
+.page-credits section h1:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid #000;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: scaleY(0.5);
+      -ms-transform: scaleY(0.5);
+          transform: scaleY(0.5);
 }
 .page-credits section p {
   font-size: 1.4em;
 }
-#music .extra {
+.page-credits .extra {
   font-size: 12px;
   font-family: monospace;
   margin-top: 10px;
+  white-space: pre;
+}
+#sound .list a {
+  font-family: monospace !important;
+  font-size: 16px;
   white-space: pre;
 }
 #tester p {

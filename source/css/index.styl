@@ -63,28 +63,41 @@ section
   text-align: center
   animation: none
   #title a
-    text-decoration: none
+    background: transparent
     &:hover
       opacity: 0.3
   a
-    text-decoration: underline
     color: #000
+    background: rgba(#000, 0.05)
     animation: none
     &:hover
-      text-decoration: none
+      background: transparent
   section
-    margin-bottom: 40px
+    margin-bottom: 60px
     h1
-      font-size: 1.8em
+      font-size: 2em
       margin-bottom: 20px
+      position: relative
+      &:after
+        content: ''
+        position: absolute
+        width: 100%
+        border-bottom: 1px solid #000
+        bottom: 0
+        left: 0
+        transform: scaleY(0.5)
     p
       font-size: 1.4em
-
-#music
   .extra
     font-size: 12px
     font-family: monospace
     margin-top: 10px
+    white-space: pre
+
+#sound
+  .list a
+    font-family: monospace!important
+    font-size: 16px
     white-space: pre
 
 #tester

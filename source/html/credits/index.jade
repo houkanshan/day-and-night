@@ -22,7 +22,8 @@
     ['ZHU Qian'],
     ['Gnod'],
     ['ThankCreate', 'http://www.thankcreate.com/works'],
-    ['ZHANG Xianzhen', 'https://www.douban.com/people/growing07/']
+    ['ZHANG Xianzhen', 'https://www.douban.com/people/growing07/'],
+    ['Larme', 'https://www.douban.com/people/Larme/']
   ]
   tester = tester.sort(function(a, b) {
     return a[0].toUpperCase() < b[0].toUpperCase() ? -1 : 1
@@ -79,12 +80,13 @@ html(lang='en')
       p
         a(href='https://www.fontsquirrel.com/fonts/amatic' target='_blank') Amatic SC - Vernon Adams
       p.extra
-        | Copyright (c) 2011 by vernon adams
+        | Copyright (c) 2011 by&nbsp;
+        a(href='http://www.sansoxygen.com' target='_blank') Vernon Adams
         br
         | (vern@newtypography.co.uk)
         br
         br
-        | with Reserved Font Names
+        | With Reserved Font Names
         br
         | “Amatic” “Amatic Bold” and “Amatic Regular”
         br
@@ -94,6 +96,9 @@ html(lang='en')
         | the SIL Open Font License, Version 1.1.
         br
         | http://scripts.sil.org/OFL
+        br
+        br
+        a(href='https://www.youcaring.com/vernon-adams-642574' target='_blank') Support the Family of Vernon Adams
 
 
     section#special-thanks

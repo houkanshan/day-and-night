@@ -5,12 +5,12 @@
     ['Rumble_BowlingBall.aif - klakmart', 'https://freesound.org/people/klakmart/sounds/108273/'],
     ['marble.wav - scotru', 'https://freesound.org/people/scotru/sounds/34732/'],
     ['Extractor Fan 02.wav - jarredgibb', 'https://freesound.org/people/jarredgibb/sounds/219488/'],
-    ['Woodblock[...].3.wav - rokenjocu', 'https://freesound.org/people/rokenjocu/sounds/262061/'],
+    ['Woodblock[…].3.wav - rokenjocu', 'https://freesound.org/people/rokenjocu/sounds/262061/'],
   ]
 -
   tester = [
     ['Ada'],
-    ['Abing', 'https://www.douban.com/people/danielblack/'],
+    ['Abing', 'https://site.douban.com/plastic_moon/'],
     ['Cosmicberry', 'https://www.douban.com/people/thunderlion/'],
     ['Krazy Lee', 'https://www.douban.com/people/krazylee/'],
     ['Hxgdzyuyi', 'https://www.douban.com/people/hxgdzyuyi/'],
@@ -67,10 +67,10 @@ html(lang='en')
         br
         | http://creativecommons.org/licenses/by/3.0/
 
-    section#sound
-      h1 Sound
+    section#sounds
+      h1 Sounds
       p.extra All from&nbsp;
-        a(href='https://freesound.org' target='_blank) https://freesound.org
+        a(href='https://freesound.org' target='_blank') FreeSound.org
 
       -for (var i = 0, ilen = sound.length; i < ilen; i++)
         p.list
@@ -81,14 +81,15 @@ html(lang='en')
       p
         a(href='http://serotoninphobia.info/' target='_blank') Zerotonin
       p HU Wei
-      p LUO Liang
+      p
+        a(href='https://www.linkedin.com/in/liangluo' target='_blank') LUO Liang
 
     section#tester
-      h1 Player Test
+      h1 Playtesters
       p.list
         -for (var i = 0, ilen = tester.length; i < ilen; i++)
           -if (tester[i][1])
-            a(href=tester[i][1] target='_blan k')=tester[i][0]
+            a(href=tester[i][1] target='_blank')=tester[i][0]
           -else
             span=tester[i][0]
 

@@ -53,6 +53,8 @@
 	__webpack_require__(3);
 	
 	__webpack_require__(4);
+	
+	__webpack_require__(10);
 
 /***/ },
 /* 1 */
@@ -1157,6 +1159,21 @@
 	  });
 	} else {
 	  document.body.classname = 'font-loaded';
+	}
+
+/***/ },
+/* 9 */,
+/* 10 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	if (/WeiBo|MicroMessenger/i.test(navigator.userAgent)) {
+	  var btn = document.querySelector('#btn-ios');
+	  btn.addEventListener('click', function (e) {
+	    e.preventDefault();
+	    alert('请先点击右上角，选择 “在浏览器打开”，欢迎来到互联网。');
+	  });
 	}
 
 /***/ }

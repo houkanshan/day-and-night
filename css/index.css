@@ -285,9 +285,19 @@ a.link {
     fill: #808080;
   }
 }
+* {
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+html {
+  -webkit-text-size-adjust: none;
+}
 body {
   font: 14px/1.2 Courier New, PingFang SC, monospace;
   padding: 40px 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 body.font-loaded {
   font: 24px/1.2 amatic, Courier New, PingFang SC, monospace;
@@ -343,6 +353,10 @@ section {
   display: block;
 }
 .page-credits {
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
   text-align: center;
   -webkit-animation: none;
           animation: none;

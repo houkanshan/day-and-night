@@ -4,9 +4,16 @@
 @require './background'
 @require './day-night'
 
+*
+  -webkit-tap-highlight-color: rgba(255,255,255,0)
+
+html
+  -webkit-text-size-adjust: none
+
 body
   font: 14px/1.2 Courier New, PingFang SC, monospace
   padding: 40px 20px
+  user-select: none
 
 body.font-loaded
   font: 24px/1.2 amatic, Courier New, PingFang SC, monospace
@@ -60,6 +67,7 @@ section
 
 // Credits
 .page-credits
+  user-select: auto
   text-align: center
   animation: none
   #title a

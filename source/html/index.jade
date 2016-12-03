@@ -1,12 +1,9 @@
-- const v = Date.now()
-- const defaultDate = (new Date()).toLocaleDateString()
-
 doctype html
 html(lang='en')
   head
     title Day and Night
     include ./include/meta.jade
-    link(rel='stylesheet' href='css/index.css?v=#{v}')
+    link(rel='stylesheet' href="css/index.css")
     link(rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png")
     link(rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png")
     link(rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png")
@@ -30,4 +27,4 @@ html(lang='en')
       a#btn-ios.link(href="https://itunes.apple.com/app/day-night-the-game/id1053986842?mt=8" target='_blank')
         include ./svg/apple-download.svg
         span.extra 中国大陆除外
-    script(src='js/index.js?v=#{v}')
+    script(src='js/index.js')

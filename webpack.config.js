@@ -1,7 +1,9 @@
 const path = require('path');
+const webpack = require('webpack')
+const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  devtool: 'source-map',
+  devtool: isProduction ? 'source-map' : null,
   entry: './source/js/index.es',
   output: {
     path: __dirname,
@@ -25,4 +27,7 @@ module.exports = {
       },
     ]
   },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin(),
+  ],
 };

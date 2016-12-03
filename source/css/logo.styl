@@ -13,7 +13,7 @@ height = 300px
   top: 110px
   left: 33px
   degree = 50deg
-  transform: rotate(degree) skew(degree)
+  transform: rotate(degree) skew(degree) translate3d(0, 0, 0)
 #logo
   background-color: #000
   overflow: hidden
@@ -33,7 +33,7 @@ height = 300px
     left: 0
     opacity: 0
     degree = -50deg
-    transform: skew(degree) rotate(degree) translate(-87px, -12px)
+    transform: skew(degree) rotate(degree) translate3d(-87px, -12px, 0)
     transform-origin: 0 0
     transition: opacity 5s ease-in-out
     &.show

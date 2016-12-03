@@ -1,5 +1,3 @@
-- const v = Date.now()
-- const defaultDate = (new Date()).toLocaleDateString()
 -
   sound = [
     ['Rumble_BowlingBall.aif - klakmart', 'https://freesound.org/people/klakmart/sounds/108273/'],
@@ -35,7 +33,7 @@ html(lang='en')
   head
     title Credits - Day and Night
     include ../include/meta.jade
-    link(rel='stylesheet' href='../css/index.css?v=#{v}')
+    link(rel='stylesheet' href='../css/index.css')
     link(rel="icon" type="image/png" sizes="192x192"  href="../favicon/android-icon-192x192.png")
     link(rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png")
     link(rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png")
@@ -93,4 +91,4 @@ html(lang='en')
           -else
             span=tester[i][0]
 
-    script(src='../js/index.js?v=#{v}')
+    script(src='../js/index.js')
